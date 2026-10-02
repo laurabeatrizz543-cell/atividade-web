@@ -1,0 +1,1225 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&family=Parisienne&display=swap');
+
+:root {
+
+    --vinho: #32111D;
+
+    --marrom: #594042;
+
+    --bege: #B7A29E;
+
+    --vermelho: #700E10;
+
+    --azul: #1D4786;
+
+    --creme: #eee3dc;
+
+    --texto: #f4e9e3;
+
+}
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background: var(--vinho);
+
+    color: var(--texto);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 300;
+
+    line-height: 1.7;
+
+}
+
+a {
+
+    color: inherit;
+
+}
+
+p {
+
+    font-size: 15px;
+
+}
+
+
+/* MENU / CABEÇALHO */
+
+.menu {
+
+    width: 100%;
+
+    min-height: 75px;
+
+    padding: 0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--vinho);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(183, 162, 158, 0.2);
+
+}
+
+.menu nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+
+}
+
+
+/* ESTRELA DA ESQUERDA */
+
+.menu nav::before {
+
+    content: "✦";
+
+    color: var(--bege);
+
+    font-size: 16px;
+
+    margin-right: 8px;
+
+}
+
+
+/* ESTRELA DA DIREITA */
+
+.menu nav::after {
+
+    content: "✦";
+
+    color: var(--bege);
+
+    font-size: 16px;
+
+    margin-left: 8px;
+
+}
+
+
+/* LINKS DO MENU */
+
+.menu nav a {
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+
+}
+
+.menu nav a:hover {
+
+    color: var(--bege);
+
+}
+
+
+/* HERO */
+
+.hero {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+
+            rgba(50, 17, 29, 0.45),
+
+            rgba(50, 17, 29, 0.75)
+
+        ),
+
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Lana_Del_Rey_-_Sasquatch_2015.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.hero-conteudo {
+
+    padding: 40px;
+
+}
+
+.pequeno {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+.hero h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(70px, 12vw, 170px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: 5px;
+
+}
+
+.artista {
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    letter-spacing: 7px;
+
+}
+
+.frase {
+
+    margin-top: 35px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 23px;
+
+    font-style: italic;
+
+}
+
+
+/* TEXTOS */
+
+.categoria {
+
+    color: var(--bege);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+}
+
+h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-weight: 400;
+
+    font-size: clamp(42px, 5vw, 70px);
+
+    line-height: 1;
+
+}
+
+h2 em {
+
+    font-weight: 400;
+
+}
+
+
+/* BOTÕES */
+
+.botao {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 13px 24px;
+
+    border: 1px solid var(--bege);
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+
+}
+
+.botao:hover {
+
+    background: var(--bege);
+
+    color: var(--vinho);
+
+}
+
+.botao-escuro {
+
+    color: var(--vinho);
+
+    border-color: var(--vinho);
+
+}
+
+.botao-escuro:hover {
+
+    background: var(--vinho);
+
+    color: var(--creme);
+
+}
+
+
+/* SOBRE */
+
+.sobre {
+
+    padding: 120px 9%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.8fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    background: var(--vinho);
+
+}
+
+.sobre-texto p:not(.categoria) {
+
+    max-width: 600px;
+
+    margin-top: 30px;
+
+}
+
+.sobre-imagem {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.sobre-imagem img {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    display: block;
+
+    box-shadow: 20px 20px 0 var(--vermelho);
+
+}
+
+.sobre-destaque {
+
+    grid-column: 1 / -1;
+
+    margin-top: 30px;
+
+    padding-top: 40px;
+
+    border-top: 1px solid rgba(183, 162, 158, 0.3);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.sobre-destaque p {
+
+    max-width: 750px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+
+}
+
+.sobre-destaque span {
+
+    color: var(--bege);
+
+    font-size: 30px;
+
+}
+
+
+/* CARDS */
+
+.cards {
+
+    padding: 30px 6% 120px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    background: var(--vinho);
+
+}
+
+.card {
+
+    min-height: 390px;
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.card-vinho {
+
+    background: var(--vermelho);
+
+}
+
+.card-marrom {
+
+    background: var(--marrom);
+
+}
+
+.card-bege {
+
+    background: var(--bege);
+
+    color: var(--vinho);
+
+}
+
+.card-azul {
+
+    background: var(--azul);
+
+}
+
+.imagem-card {
+
+    height: 210px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 0.65;
+
+    transition: 0.5s;
+
+}
+
+.card:hover .imagem-card {
+
+    transform: scale(1.05);
+
+    opacity: 0.85;
+
+}
+
+.imagem-faixas {
+
+    background-image:
+
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Lana_Del_Rey_Coachella_01.jpg");
+
+}
+
+.imagem-lana {
+
+    background-image:
+
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Lana_Del_Rey_Coachella_02.jpg");
+
+}
+
+.imagem-curiosidades {
+
+    background-image:
+
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Lana_Del_Rey_Coachella_03.jpg");
+
+}
+
+.imagem-losangeles {
+
+    background-image:
+
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Lana_Del_Rey_Coachella_04.jpg");
+
+}
+
+.card-conteudo {
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+}
+
+.card-conteudo h3 {
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: 400;
+
+    margin-bottom: 10px;
+
+}
+
+.card-conteudo p {
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    opacity: 0.85;
+
+}
+
+.card-conteudo span {
+
+    font-size: 22px;
+
+}
+
+
+/* DESTAQUE */
+
+.destaque {
+
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: var(--marrom);
+
+}
+
+.destaque-texto {
+
+    padding: 100px 10%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.destaque-texto > p:not(.categoria) {
+
+    max-width: 520px;
+
+    margin-top: 30px;
+
+}
+
+.destaque-imagem {
+
+    min-height: 500px;
+
+    background:
+
+        linear-gradient(
+
+            rgba(50, 17, 29, 0.15),
+
+            rgba(50, 17, 29, 0.35)
+
+        ),
+
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Lana_Del_Rey_-_Sasquatch_2015_2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+/* PRÉVIA DAS FAIXAS */
+
+.conteudo {
+
+    padding: 120px 9%;
+
+    background: var(--creme);
+
+    color: var(--vinho);
+
+}
+
+.conteudo .categoria {
+
+    color: var(--vermelho);
+
+}
+
+.conteudo h2 {
+
+    margin-bottom: 60px;
+
+}
+
+.faixas-lista {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 0;
+
+}
+
+.faixas-lista div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 20px 10px;
+
+    border-bottom: 1px solid rgba(50, 17, 29, 0.2);
+
+    transition: 0.3s;
+
+}
+
+.faixas-lista div:hover {
+
+    padding-left: 20px;
+
+    background: rgba(183, 162, 158, 0.2);
+
+}
+
+.faixas-lista span {
+
+    color: var(--vermelho);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+.faixas-lista p {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 23px;
+
+}
+
+
+/* LANA */
+
+.lana {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+
+    background: var(--azul);
+
+}
+
+.lana-imagem {
+
+    min-height: 600px;
+
+    background:
+
+        linear-gradient(
+
+            rgba(29, 71, 134, 0.15),
+
+            rgba(29, 71, 134, 0.35)
+
+        ),
+
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Lana_Del_Rey_headshot%2C_Coachella_2014.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.lana-texto {
+
+    padding: 100px 10%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.lana-texto p:not(.categoria) {
+
+    margin-top: 30px;
+
+    max-width: 550px;
+
+}
+
+
+/* CURIOSIDADES */
+
+.curiosidades {
+
+    padding: 120px 9%;
+
+    background: var(--vermelho);
+
+}
+
+.curiosidades-texto {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+.curiosidades h2 {
+
+    max-width: 700px;
+
+    margin-bottom: 60px;
+
+}
+
+.curiosidade {
+
+    padding: 30px 0;
+
+    border-top: 1px solid rgba(238, 227, 220, 0.3);
+
+}
+
+.curiosidade h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    margin-bottom: 10px;
+
+}
+
+.curiosidade p {
+
+    max-width: 700px;
+
+}
+
+
+/* CONCLUSÃO */
+
+.conclusao {
+
+    min-height: 600px;
+
+    padding: 120px 9%;
+
+    display: flex;
+
+    align-items: center;
+
+    background: var(--vinho);
+
+}
+
+.conclusao > div {
+
+    max-width: 850px;
+
+}
+
+.conclusao h2 {
+
+    margin-bottom: 40px;
+
+}
+
+.conclusao p:not(.categoria) {
+
+    max-width: 750px;
+
+    margin-bottom: 25px;
+
+    font-size: 12px;
+
+}
+
+
+/* RODAPÉ */
+
+footer {
+
+    padding: 35px 6%;
+
+    background: #210b13;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+}
+
+footer p {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+footer span {
+
+    color: var(--bege);
+
+}
+
+
+/* PÁGINAS INTERNAS */
+
+.pagina-interna {
+
+    min-height: 100vh;
+
+    padding: 100px 9%;
+
+    background: var(--vinho);
+
+}
+
+.pagina-cabecalho {
+
+    max-width: 900px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+}
+
+.pagina-cabecalho h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+
+}
+
+.pagina-texto {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+}
+
+.pagina-texto h2 {
+
+    font-size: 42px;
+
+    margin-top: 70px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+}
+
+.pagina-texto p {
+
+    margin-bottom: 25px;
+
+}
+
+.voltar {
+
+    display: inline-block;
+
+    margin-top: 70px;
+
+    color: var(--bege);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid var(--bege);
+
+    padding-bottom: 5px;
+
+    transition: 0.3s;
+
+}
+
+.voltar:hover {
+
+    color: white;
+
+}
+
+
+/* PÁGINA DE FAIXAS */
+
+.faixas-completas {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.faixa {
+
+    padding: 25px 10px;
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr auto;
+
+    gap: 25px;
+
+    align-items: center;
+
+    border-bottom: 1px solid rgba(183, 162, 158, 0.25);
+
+}
+
+.faixa-numero {
+
+    color: var(--bege);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+.faixa-info h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    margin-bottom: 5px;
+
+}
+
+.faixa-info p {
+
+    font-size: 13px;
+
+    opacity: 0.75;
+
+}
+
+.botao-musica {
+
+    padding: 10px 16px;
+
+    border: 1px solid var(--bege);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+.botao-musica:hover {
+
+    background: var(--bege);
+
+    color: var(--vinho);
+
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+
+    .menu nav {
+
+        gap: 15px;
+
+    }
+
+    .menu nav a {
+
+        font-size: 9px;
+
+    }
+
+    .cards {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .sobre {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .destaque,
+
+    .lana {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .destaque-imagem,
+
+    .lana-imagem {
+
+        min-height: 450px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .menu {
+
+        padding: 20px;
+
+        min-height: auto;
+
+    }
+
+    .menu nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+
+    }
+
+    .menu nav a {
+
+        font-size: 8px;
+
+    }
+
+    .menu nav::before,
+
+    .menu nav::after {
+
+        font-size: 13px;
+
+        margin: 0 3px;
+
+    }
+
+    .hero {
+
+        min-height: 80vh;
+
+    }
+
+    .hero h1 {
+
+        font-size: 60px;
+
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .faixas-lista {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .sobre,
+
+    .conteudo,
+
+    .curiosidades,
+
+    .conclusao,
+
+    .pagina-interna {
+
+        padding: 80px 7%;
+
+    }
+
+    .sobre-destaque {
+
+        display: block;
+
+    }
+
+    .sobre-destaque span {
+
+        display: block;
+
+        margin-top: 20px;
+
+    }
+
+    .destaque-texto,
+
+    .lana-texto {
+
+        padding: 80px 7%;
+
+    }
+
+    .faixa {
+
+        grid-template-columns: 35px 1fr;
+
+        gap: 15px;
+
+    }
+
+    .botao-musica {
+
+        grid-column: 2;
+
+        justify-self: start;
+
+    }
+
+    .pagina-cabecalho h1 {
+
+        font-size: 55px;
+
+    }
+
+}
